@@ -1,0 +1,46 @@
+import{_ as n}from"./plugin-vue_export-helper-DlAUqK2U.js";import{o as s,c as a,a as e}from"./app-BpO3Vn9P.js";const o={},t=e(`<div class="language-sql line-numbers-mode" data-ext="sql" data-title="sql"><pre class="language-sql"><code><span class="token comment">-- 精美的语句，可惜不能查到 没有的 category</span>
+<span class="token comment">-- select </span>
+<span class="token comment">--     category_table.category,</span>
+<span class="token comment">--     count(*) as accounts_count </span>
+<span class="token comment">-- from </span>
+<span class="token comment">-- (</span>
+<span class="token comment">--     select </span>
+<span class="token comment">--         a.*, </span>
+<span class="token comment">--         CASE  </span>
+<span class="token comment">--         WHEN a.income &lt; 20000 THEN</span>
+<span class="token comment">--             &#39;Low Salary&#39;</span>
+<span class="token comment">--         WHEN a.income &gt; 50000  THEN</span>
+<span class="token comment">--             &#39;High Salary&#39;</span>
+<span class="token comment">--         ELSE</span>
+<span class="token comment">--             &#39;Average Salary&#39;</span>
+<span class="token comment">--         END as category       </span>
+<span class="token comment">--     from Accounts as a</span>
+<span class="token comment">-- )as category_table</span>
+<span class="token comment">-- group by category_table.category</span>
+<span class="token keyword">SELECT</span>
+    <span class="token string">&#39;High Salary&#39;</span> <span class="token keyword">AS</span> category<span class="token punctuation">,</span>
+    <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> accounts_count
+<span class="token keyword">FROM</span>
+    Accounts
+<span class="token keyword">where</span>
+    income <span class="token operator">&gt;</span> <span class="token number">50000</span>
+<span class="token keyword">union</span>
+<span class="token keyword">all</span>
+<span class="token keyword">SELECT</span>
+    <span class="token string">&#39;Low Salary&#39;</span> <span class="token keyword">AS</span> category<span class="token punctuation">,</span>
+    <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> accounts_count
+<span class="token keyword">FROM</span>
+    Accounts
+<span class="token keyword">where</span>
+    income <span class="token operator">&lt;</span> <span class="token number">20000</span>
+<span class="token keyword">union</span>
+<span class="token keyword">all</span>
+<span class="token keyword">SELECT</span>
+    <span class="token string">&#39;Average Salary&#39;</span> <span class="token keyword">AS</span> category<span class="token punctuation">,</span>
+    <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">AS</span> accounts_count
+<span class="token keyword">FROM</span>
+    Accounts
+<span class="token keyword">where</span>
+    income <span class="token operator">&gt;=</span> <span class="token number">20000</span>
+    <span class="token operator">AND</span> income <span class="token operator">&lt;=</span> <span class="token number">50000</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,1),c=[t];function p(l,i){return s(),a("div",null,c)}const m=n(o,[["render",p],["__file","1907. 按分类统计薪水.html.vue"]]),d=JSON.parse(`{"path":"/Leetcode/SQL/1907.%20%E6%8C%89%E5%88%86%E7%B1%BB%E7%BB%9F%E8%AE%A1%E8%96%AA%E6%B0%B4.html","title":"1907. 按分类统计薪水","lang":"zh-CN","frontmatter":{"title":"1907. 按分类统计薪水","categories":["Leetcode","SQL"]},"headers":[],"git":{"createdTime":1713887535000,"updatedTime":1713887535000,"contributors":[{"name":"LYPvvvLYP","email":"1909266427@qq.com","commits":1}]},"readingTime":{"minutes":0.37,"words":110},"filePathRelative":"Leetcode/SQL/1907. 按分类统计薪水.md","localizedDate":"2024年4月23日","excerpt":"<div class=\\"language-sql\\" data-ext=\\"sql\\" data-title=\\"sql\\"><pre class=\\"language-sql\\"><code><span class=\\"token comment\\">-- 精美的语句，可惜不能查到 没有的 category</span>\\n<span class=\\"token comment\\">-- select </span>\\n<span class=\\"token comment\\">--     category_table.category,</span>\\n<span class=\\"token comment\\">--     count(*) as accounts_count </span>\\n<span class=\\"token comment\\">-- from </span>\\n<span class=\\"token comment\\">-- (</span>\\n<span class=\\"token comment\\">--     select </span>\\n<span class=\\"token comment\\">--         a.*, </span>\\n<span class=\\"token comment\\">--         CASE  </span>\\n<span class=\\"token comment\\">--         WHEN a.income &lt; 20000 THEN</span>\\n<span class=\\"token comment\\">--             'Low Salary'</span>\\n<span class=\\"token comment\\">--         WHEN a.income &gt; 50000  THEN</span>\\n<span class=\\"token comment\\">--             'High Salary'</span>\\n<span class=\\"token comment\\">--         ELSE</span>\\n<span class=\\"token comment\\">--             'Average Salary'</span>\\n<span class=\\"token comment\\">--         END as category       </span>\\n<span class=\\"token comment\\">--     from Accounts as a</span>\\n<span class=\\"token comment\\">-- )as category_table</span>\\n<span class=\\"token comment\\">-- group by category_table.category</span>\\n<span class=\\"token keyword\\">SELECT</span>\\n    <span class=\\"token string\\">'High Salary'</span> <span class=\\"token keyword\\">AS</span> category<span class=\\"token punctuation\\">,</span>\\n    <span class=\\"token function\\">count</span><span class=\\"token punctuation\\">(</span><span class=\\"token operator\\">*</span><span class=\\"token punctuation\\">)</span> <span class=\\"token keyword\\">AS</span> accounts_count\\n<span class=\\"token keyword\\">FROM</span>\\n    Accounts\\n<span class=\\"token keyword\\">where</span>\\n    income <span class=\\"token operator\\">&gt;</span> <span class=\\"token number\\">50000</span>\\n<span class=\\"token keyword\\">union</span>\\n<span class=\\"token keyword\\">all</span>\\n<span class=\\"token keyword\\">SELECT</span>\\n    <span class=\\"token string\\">'Low Salary'</span> <span class=\\"token keyword\\">AS</span> category<span class=\\"token punctuation\\">,</span>\\n    <span class=\\"token function\\">count</span><span class=\\"token punctuation\\">(</span><span class=\\"token operator\\">*</span><span class=\\"token punctuation\\">)</span> <span class=\\"token keyword\\">AS</span> accounts_count\\n<span class=\\"token keyword\\">FROM</span>\\n    Accounts\\n<span class=\\"token keyword\\">where</span>\\n    income <span class=\\"token operator\\">&lt;</span> <span class=\\"token number\\">20000</span>\\n<span class=\\"token keyword\\">union</span>\\n<span class=\\"token keyword\\">all</span>\\n<span class=\\"token keyword\\">SELECT</span>\\n    <span class=\\"token string\\">'Average Salary'</span> <span class=\\"token keyword\\">AS</span> category<span class=\\"token punctuation\\">,</span>\\n    <span class=\\"token function\\">count</span><span class=\\"token punctuation\\">(</span><span class=\\"token operator\\">*</span><span class=\\"token punctuation\\">)</span> <span class=\\"token keyword\\">AS</span> accounts_count\\n<span class=\\"token keyword\\">FROM</span>\\n    Accounts\\n<span class=\\"token keyword\\">where</span>\\n    income <span class=\\"token operator\\">&gt;=</span> <span class=\\"token number\\">20000</span>\\n    <span class=\\"token operator\\">AND</span> income <span class=\\"token operator\\">&lt;=</span> <span class=\\"token number\\">50000</span>\\n</code></pre></div>"}`);export{m as comp,d as data};
